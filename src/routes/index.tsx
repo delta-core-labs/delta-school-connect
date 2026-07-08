@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import dashboardShot from "@/assets/dashboard.png.asset.json";
-import feedShot from "@/assets/feed.png.asset.json";
-import ledgerShot from "@/assets/ledger.png.asset.json";
-import feesShot from "@/assets/fees.png.asset.json";
-import profileShot from "@/assets/profile.jpg.asset.json";
+import dashboardShot from "@/assets/dashboard.webp.asset.json";
+import feedShot from "@/assets/feed.webp.asset.json";
+import ledgerShot from "@/assets/ledger.webp.asset.json";
+import feesShot from "@/assets/fees.webp.asset.json";
+import profileShot from "@/assets/profile.webp.asset.json";
+
 
 
 export const Route = createFileRoute("/")({

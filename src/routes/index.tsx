@@ -85,16 +85,19 @@ function Home() {
           </div>
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="absolute -inset-6 rounded-3xl bg-brand/20 blur-2xl" />
-              <img
-                src={logoAsset.url}
-                alt="DeltaSchool app icon"
-                className="relative h-56 w-56 rounded-3xl shadow-2xl sm:h-64 sm:w-64"
-              />
+              <div className="absolute -inset-8 rounded-[3rem] bg-brand/25 blur-3xl" />
+              <div className="relative rounded-[2.25rem] border-[10px] border-navy-foreground/10 bg-navy-foreground/5 p-1 shadow-2xl backdrop-blur">
+                <img
+                  src={dashboardShot.url}
+                  alt="DeltaSchool admin dashboard preview"
+                  className="block h-auto w-[280px] rounded-[1.6rem] sm:w-[320px]"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* How it works */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">

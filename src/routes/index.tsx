@@ -91,8 +91,14 @@ function Home() {
                 <img
                   src={dashboardShot.url}
                   alt="DeltaSchool admin dashboard preview"
+                  width={540}
+                  height={1361}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="block h-full w-full object-cover object-top"
                 />
+
               </div>
             </div>
           </div>

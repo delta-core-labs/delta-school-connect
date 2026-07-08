@@ -86,15 +86,16 @@ function Home() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute -inset-8 rounded-[3rem] bg-brand/25 blur-3xl" />
-              <div className="relative rounded-[2.25rem] border-[10px] border-navy-foreground/10 bg-navy-foreground/5 p-1 shadow-2xl backdrop-blur">
+              <div className="relative aspect-[9/20] w-[260px] overflow-hidden rounded-[2.25rem] border-[10px] border-navy-foreground/10 bg-white shadow-2xl sm:w-[300px]">
                 <img
                   src={dashboardShot.url}
                   alt="DeltaSchool admin dashboard preview"
-                  className="block h-auto w-[280px] rounded-[1.6rem] sm:w-[320px]"
+                  className="block h-full w-full object-cover object-top"
                 />
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -147,22 +148,24 @@ function Home() {
               { src: ledgerShot.url, tag: "For Admins", title: "Transaction Ledger", desc: "Every collection tracked across UPI, cash, and bank." },
               { src: profileShot.url, tag: "Records", title: "Student Profile", desc: "Identity, academic, and fee details in one place." },
             ].map((s) => (
-              <div key={s.title} className="group flex flex-col">
-                <div className="relative overflow-hidden rounded-2xl border border-border bg-navy p-3 shadow-md transition-shadow group-hover:shadow-lg">
+              <div key={s.title} className="group flex flex-col items-center">
+                <div className="relative aspect-[9/20] w-full max-w-[240px] overflow-hidden rounded-[1.75rem] border-[8px] border-navy/90 bg-white shadow-md transition-shadow group-hover:shadow-xl">
                   <img
                     src={s.src}
                     alt={`DeltaSchool ${s.title} screen`}
                     loading="lazy"
-                    className="block h-auto w-full rounded-xl"
+                    className="block h-full w-full object-cover object-top"
                   />
                 </div>
-                <div className="mt-4">
+
+                <div className="mt-4 text-center">
                   <span className="inline-block rounded-full bg-brand/15 px-2.5 py-0.5 text-xs font-semibold text-navy">
                     {s.tag}
                   </span>
                   <h3 className="mt-2 text-base font-semibold text-navy">{s.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
                 </div>
+
               </div>
             ))}
           </div>

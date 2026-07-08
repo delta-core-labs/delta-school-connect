@@ -86,15 +86,16 @@ function Home() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute -inset-8 rounded-[3rem] bg-brand/25 blur-3xl" />
-              <div className="relative rounded-[2.25rem] border-[10px] border-navy-foreground/10 bg-navy-foreground/5 p-1 shadow-2xl backdrop-blur">
+              <div className="relative aspect-[9/20] w-[260px] overflow-hidden rounded-[2.25rem] border-[10px] border-navy-foreground/10 bg-white shadow-2xl sm:w-[300px]">
                 <img
                   src={dashboardShot.url}
                   alt="DeltaSchool admin dashboard preview"
-                  className="block h-auto w-[280px] rounded-[1.6rem] sm:w-[320px]"
+                  className="block h-full w-full object-cover object-top"
                 />
               </div>
             </div>
           </div>
+
         </div>
       </section>
 

@@ -128,7 +128,48 @@ function Home() {
         </div>
       </section>
 
-      {/* Legal shortcut band */}
+      {/* Screens showcase */}
+      <section className="border-t border-border bg-secondary/30">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+              A closer look inside the app
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground">
+              Real screens from DeltaSchool — designed for clarity on any device, for every role.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { src: feedShot.url, tag: "Communication", title: "Class Feed", desc: "Announcements, homework, and posts in one stream." },
+              { src: feesShot.url, tag: "For Parents", title: "My Fees", desc: "Outstanding balance, breakdown, and receipts." },
+              { src: ledgerShot.url, tag: "For Admins", title: "Transaction Ledger", desc: "Every collection tracked across UPI, cash, and bank." },
+              { src: profileShot.url, tag: "Records", title: "Student Profile", desc: "Identity, academic, and fee details in one place." },
+            ].map((s) => (
+              <div key={s.title} className="group flex flex-col">
+                <div className="relative overflow-hidden rounded-2xl border border-border bg-navy p-3 shadow-md transition-shadow group-hover:shadow-lg">
+                  <img
+                    src={s.src}
+                    alt={`DeltaSchool ${s.title} screen`}
+                    loading="lazy"
+                    className="block h-auto w-full rounded-xl"
+                  />
+                </div>
+                <div className="mt-4">
+                  <span className="inline-block rounded-full bg-brand/15 px-2.5 py-0.5 text-xs font-semibold text-navy">
+                    {s.tag}
+                  </span>
+                  <h3 className="mt-2 text-base font-semibold text-navy">{s.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       <section className="border-t border-border bg-secondary/40">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-4 py-10 sm:px-6 md:flex-row md:items-center">
           <div>

@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import logoAsset from "@/assets/deltaschool-logo.png.asset.json";
+import dashboardShot from "@/assets/dashboard.png.asset.json";
+import feedShot from "@/assets/feed.png.asset.json";
+import ledgerShot from "@/assets/ledger.png.asset.json";
+import feesShot from "@/assets/fees.png.asset.json";
+import profileShot from "@/assets/profile.jpg.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({

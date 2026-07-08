@@ -160,9 +160,13 @@ function Home() {
                   <img
                     src={s.src}
                     alt={`DeltaSchool ${s.title} screen`}
+                    width={540}
+                    height={1250}
                     loading="lazy"
+                    decoding="async"
                     className="block h-full w-full object-cover object-top"
                   />
+
                 </div>
 
                 <div className="mt-4 text-center">

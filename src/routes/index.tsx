@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import dashboardShot from "@/assets/dashboard.png.asset.json";
-import feedShot from "@/assets/feed.png.asset.json";
-import ledgerShot from "@/assets/ledger.png.asset.json";
-import feesShot from "@/assets/fees.png.asset.json";
-import profileShot from "@/assets/profile.jpg.asset.json";
+import dashboardShot from "@/assets/dashboard.webp.asset.json";
+import feedShot from "@/assets/feed.webp.asset.json";
+import ledgerShot from "@/assets/ledger.webp.asset.json";
+import feesShot from "@/assets/fees.webp.asset.json";
+import profileShot from "@/assets/profile.webp.asset.json";
+
 
 
 export const Route = createFileRoute("/")({
@@ -90,8 +91,14 @@ function Home() {
                 <img
                   src={dashboardShot.url}
                   alt="DeltaSchool admin dashboard preview"
+                  width={540}
+                  height={1361}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="block h-full w-full object-cover object-top"
                 />
+
               </div>
             </div>
           </div>
@@ -153,9 +160,13 @@ function Home() {
                   <img
                     src={s.src}
                     alt={`DeltaSchool ${s.title} screen`}
+                    width={540}
+                    height={1250}
                     loading="lazy"
+                    decoding="async"
                     className="block h-full w-full object-cover object-top"
                   />
+
                 </div>
 
                 <div className="mt-4 text-center">

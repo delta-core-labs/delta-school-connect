@@ -158,13 +158,14 @@ function Home() {
                   />
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-4 text-center">
                   <span className="inline-block rounded-full bg-brand/15 px-2.5 py-0.5 text-xs font-semibold text-navy">
                     {s.tag}
                   </span>
                   <h3 className="mt-2 text-base font-semibold text-navy">{s.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
                 </div>
+
               </div>
             ))}
           </div>

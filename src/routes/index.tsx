@@ -148,15 +148,16 @@ function Home() {
               { src: ledgerShot.url, tag: "For Admins", title: "Transaction Ledger", desc: "Every collection tracked across UPI, cash, and bank." },
               { src: profileShot.url, tag: "Records", title: "Student Profile", desc: "Identity, academic, and fee details in one place." },
             ].map((s) => (
-              <div key={s.title} className="group flex flex-col">
-                <div className="relative overflow-hidden rounded-2xl border border-border bg-navy p-3 shadow-md transition-shadow group-hover:shadow-lg">
+              <div key={s.title} className="group flex flex-col items-center">
+                <div className="relative aspect-[9/20] w-full max-w-[240px] overflow-hidden rounded-[1.75rem] border-[8px] border-navy/90 bg-white shadow-md transition-shadow group-hover:shadow-xl">
                   <img
                     src={s.src}
                     alt={`DeltaSchool ${s.title} screen`}
                     loading="lazy"
-                    className="block h-auto w-full rounded-xl"
+                    className="block h-full w-full object-cover object-top"
                   />
                 </div>
+
                 <div className="mt-4">
                   <span className="inline-block rounded-full bg-brand/15 px-2.5 py-0.5 text-xs font-semibold text-navy">
                     {s.tag}

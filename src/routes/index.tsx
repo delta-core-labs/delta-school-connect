@@ -159,18 +159,17 @@ function Home() {
               { src: profileShot.url, tag: "Records", title: "Student Profile", desc: "Identity, academic, and fee details in one place." },
             ].map((s) => (
               <div key={s.title} className="group flex flex-col items-center">
-                <PhoneFrame className="w-full max-w-[220px]">
+                <div className="relative aspect-[9/20] w-full max-w-[240px] overflow-hidden rounded-[1.75rem] border-[8px] border-navy/90 bg-white shadow-md transition-shadow group-hover:shadow-xl">
                   <img
                     src={s.src}
                     alt={`DeltaSchool ${s.title} screen`}
                     width={540}
-                    height={1200}
+                    height={1250}
                     loading="lazy"
                     decoding="async"
                     className="block h-full w-full object-cover object-top"
                   />
-                </PhoneFrame>
-
+                </div>
 
                 <div className="mt-4 text-center">
                   <span className="inline-block rounded-full bg-brand/15 px-2.5 py-0.5 text-xs font-semibold text-navy">
@@ -179,7 +178,6 @@ function Home() {
                   <h3 className="mt-2 text-base font-semibold text-navy">{s.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
                 </div>
-
               </div>
             ))}
           </div>

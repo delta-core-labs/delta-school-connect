@@ -87,21 +87,32 @@ function Home() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute -inset-8 rounded-[3rem] bg-brand/25 blur-3xl" />
-              <div className="relative aspect-[9/20] w-[260px] overflow-hidden rounded-[2.25rem] border-[10px] border-navy-foreground/10 bg-white shadow-2xl sm:w-[300px]">
-                <img
-                  src={dashboardShot.url}
-                  alt="DeltaSchool admin dashboard preview"
-                  width={540}
-                  height={1361}
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  className="block h-full w-full object-cover object-top"
-                />
-
+              {/* Phone frame */}
+              <div className="relative w-[260px] rounded-[2.75rem] bg-navy-foreground/10 p-[3px] shadow-2xl sm:w-[300px]">
+                <div className="rounded-[2.55rem] bg-navy p-[10px]">
+                  <div className="relative aspect-[9/20] overflow-hidden rounded-[2rem] bg-white">
+                    {/* Dynamic island */}
+                    <div className="pointer-events-none absolute left-1/2 top-2 z-10 h-[22px] w-[86px] -translate-x-1/2 rounded-full bg-navy" />
+                    <img
+                      src={dashboardShot.url}
+                      alt="DeltaSchool admin dashboard preview"
+                      width={540}
+                      height={1200}
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
+                      className="block h-full w-full object-cover object-top"
+                    />
+                  </div>
+                </div>
+                {/* Side buttons */}
+                <div className="absolute -left-[3px] top-24 h-10 w-[3px] rounded-l bg-navy-foreground/20" />
+                <div className="absolute -left-[3px] top-40 h-16 w-[3px] rounded-l bg-navy-foreground/20" />
+                <div className="absolute -right-[3px] top-32 h-20 w-[3px] rounded-r bg-navy-foreground/20" />
               </div>
             </div>
           </div>
+
 
         </div>
       </section>

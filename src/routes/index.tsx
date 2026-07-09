@@ -1,10 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
+import { PhoneFrame } from "@/components/PhoneFrame";
 import dashboardShot from "@/assets/dashboard.webp.asset.json";
 import feedShot from "@/assets/feed.webp.asset.json";
 import ledgerShot from "@/assets/ledger.webp.asset.json";
 import feesShot from "@/assets/fees.webp.asset.json";
 import profileShot from "@/assets/profile.webp.asset.json";
+
 
 
 
@@ -87,31 +89,21 @@ function Home() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute -inset-8 rounded-[3rem] bg-brand/25 blur-3xl" />
-              {/* Phone frame */}
-              <div className="relative w-[260px] rounded-[2.75rem] bg-navy-foreground/10 p-[3px] shadow-2xl sm:w-[300px]">
-                <div className="rounded-[2.55rem] bg-navy p-[10px]">
-                  <div className="relative aspect-[9/20] overflow-hidden rounded-[2rem] bg-white">
-                    {/* Dynamic island */}
-                    <div className="pointer-events-none absolute left-1/2 top-2 z-10 h-[22px] w-[86px] -translate-x-1/2 rounded-full bg-navy" />
-                    <img
-                      src={dashboardShot.url}
-                      alt="DeltaSchool admin dashboard preview"
-                      width={540}
-                      height={1200}
-                      loading="eager"
-                      fetchPriority="high"
-                      decoding="async"
-                      className="block h-full w-full object-cover object-top"
-                    />
-                  </div>
-                </div>
-                {/* Side buttons */}
-                <div className="absolute -left-[3px] top-24 h-10 w-[3px] rounded-l bg-navy-foreground/20" />
-                <div className="absolute -left-[3px] top-40 h-16 w-[3px] rounded-l bg-navy-foreground/20" />
-                <div className="absolute -right-[3px] top-32 h-20 w-[3px] rounded-r bg-navy-foreground/20" />
-              </div>
+              <PhoneFrame className="w-[260px] sm:w-[300px]">
+                <img
+                  src={dashboardShot.url}
+                  alt="DeltaSchool admin dashboard preview"
+                  width={540}
+                  height={1200}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="block h-full w-full object-cover object-top"
+                />
+              </PhoneFrame>
             </div>
           </div>
+
 
 
         </div>
@@ -167,18 +159,18 @@ function Home() {
               { src: profileShot.url, tag: "Records", title: "Student Profile", desc: "Identity, academic, and fee details in one place." },
             ].map((s) => (
               <div key={s.title} className="group flex flex-col items-center">
-                <div className="relative aspect-[9/20] w-full max-w-[240px] overflow-hidden rounded-[1.75rem] border-[8px] border-navy/90 bg-white shadow-md transition-shadow group-hover:shadow-xl">
+                <PhoneFrame className="w-full max-w-[220px]">
                   <img
                     src={s.src}
                     alt={`DeltaSchool ${s.title} screen`}
                     width={540}
-                    height={1250}
+                    height={1200}
                     loading="lazy"
                     decoding="async"
                     className="block h-full w-full object-cover object-top"
                   />
+                </PhoneFrame>
 
-                </div>
 
                 <div className="mt-4 text-center">
                   <span className="inline-block rounded-full bg-brand/15 px-2.5 py-0.5 text-xs font-semibold text-navy">

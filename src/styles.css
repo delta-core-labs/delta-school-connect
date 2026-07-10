@@ -34,6 +34,7 @@
   --color-brand-foreground: var(--brand-foreground);
   --color-navy: var(--navy);
   --color-navy-foreground: var(--navy-foreground);
+  --color-bezel: var(--bezel);
 }
 
 :root {

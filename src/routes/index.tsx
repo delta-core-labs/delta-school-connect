@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { PhoneFrame } from "@/components/PhoneFrame";
+
 import dashboardShot from "@/assets/dashboard.webp.asset.json";
 import feedShot from "@/assets/feed.webp.asset.json";
 import ledgerShot from "@/assets/ledger.webp.asset.json";

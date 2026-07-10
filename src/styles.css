@@ -34,6 +34,7 @@
   --color-brand-foreground: var(--brand-foreground);
   --color-navy: var(--navy);
   --color-navy-foreground: var(--navy-foreground);
+  --color-bezel: var(--bezel);
 }
 
 :root {
@@ -44,6 +45,7 @@
   --navy-foreground: oklch(0.98 0.01 90);
   --brand: oklch(0.85 0.16 90);           /* logo yellow */
   --brand-foreground: oklch(0.22 0.06 275);
+  --bezel: black;
 
   --background: oklch(0.995 0.005 90);
   --foreground: oklch(0.22 0.06 275);

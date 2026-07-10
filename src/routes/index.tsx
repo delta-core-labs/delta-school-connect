@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { PhoneFrame } from "@/components/PhoneFrame";
+
 import dashboardShot from "@/assets/dashboard.webp.asset.json";
 import feedShot from "@/assets/feed.webp.asset.json";
 import ledgerShot from "@/assets/ledger.webp.asset.json";
@@ -89,7 +89,7 @@ function Home() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div className="absolute -inset-8 rounded-[3rem] bg-brand/25 blur-3xl" />
-              <PhoneFrame className="w-[260px] sm:w-[300px]">
+              <div className="relative aspect-[9/20] w-[260px] overflow-hidden rounded-[1.75rem] border-[8px] border-navy/90 bg-white shadow-md sm:w-[300px]">
                 <img
                   src={dashboardShot.url}
                   alt="DeltaSchool admin dashboard preview"
@@ -100,7 +100,7 @@ function Home() {
                   decoding="async"
                   className="block h-full w-full object-cover object-top"
                 />
-              </PhoneFrame>
+              </div>
             </div>
           </div>
 

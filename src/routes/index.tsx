@@ -87,9 +87,7 @@ function Home() {
             </div>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="absolute -inset-8 rounded-[3rem] bg-brand/25 blur-3xl" />
-              <div className="relative aspect-[9/20] w-[260px] overflow-hidden rounded-[1.75rem] border-[8px] border-navy/90 bg-white shadow-md sm:w-[300px]">
+            <div className="relative aspect-[9/20] w-[260px] overflow-hidden rounded-[1.75rem] border-[8px] border-bezel bg-white shadow-md sm:w-[300px]">
                 <img
                   src={dashboardShot.url}
                   alt="DeltaSchool admin dashboard preview"
